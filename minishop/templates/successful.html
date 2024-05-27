@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Confirmation</title>
+<style>
+    /* CSS for styling the payment success message */
+    .payment-success {
+        text-align: center;
+        margin-top: 50px;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    .payment-success h2 {
+        color: #4CAF50;
+    }
+
+    /* CSS for the fireworks animation */
+    @keyframes fireworks {
+        0% {
+            transform: translateY(0) rotateZ(0deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-500px) rotateZ(360deg);
+            opacity: 0;
+        }
+    }
+
+    .firework {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #f00;
+        border-radius: 50%;
+        animation: fireworks 1s linear infinite;
+    }
+
+    /* Position the fireworks */
+    .firework1 { left: 20%; }
+    .firework2 { left: 50%; }
+    .firework3 { left: 80%; }
+</style>
+</head>
+<body>
+
+<!-- Payment success message -->
+<div class="payment-success">
+    <h2>Payment Successful!</h2>
+    <p>Thank you for your transaction. Your payment has been processed successfully.</p>
+    <!-- Fireworks -->
+    <div class="firework firework1"></div>
+    <div class="firework firework2"></div>
+    <div class="firework firework3"></div>
+</div>
+
+</body>
+</html>
